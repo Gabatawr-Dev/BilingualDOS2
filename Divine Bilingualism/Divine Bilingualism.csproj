@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>Bilingualism</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x86</Platforms>
+    <LangVersion>latest</LangVersion>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Lib\LSLib.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Lib\LSLib.dll" />
+    <Content Include="logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AlphaFS">
+      <HintPath>Lib\AlphaFS.dll</HintPath>
+    </Reference>
+    <Reference Include="LSLib">
+      <HintPath>Lib\LSLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LSLibNative">
+      <HintPath>Lib\LSLibNative.dll</HintPath>
+    </Reference>
+    <Reference Include="LZ4">
+      <HintPath>Lib\LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="zlib.net">
+      <HintPath>Lib\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
